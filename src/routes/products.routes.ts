@@ -1,13 +1,14 @@
 import express from 'express';
 import ProductsControllers from '../controllers/products.controllers';
-import Validated from '../middlewares/validations/products.validations';
+import Validations from '../middlewares/validations/products.validations';
 
 const productRoutes = express.Router();
 
 const productsController = new ProductsControllers();
+const validated = new Validations();
 
 productRoutes
   .get('/', productsController.getAll)
-  .post('/', Validated, productsController.create);
+  .post('/', validated.Validated, productsController.create);
 
 export default productRoutes;

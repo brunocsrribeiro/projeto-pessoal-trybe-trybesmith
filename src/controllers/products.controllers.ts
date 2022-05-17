@@ -9,7 +9,7 @@ export default class ProductsControllers {
     this.product = new ProductsServices();
   }
 
-  public getAll = async (_req: Request, res: Response, next: NextFunction) => {
+  getAll = async (_req: Request, res: Response, next: NextFunction) => {
     try {
       const products = await this.product.getAll();
   
@@ -19,7 +19,7 @@ export default class ProductsControllers {
     }
   };
 
-  public create = async (req: Request, res: Response, next: NextFunction) => {
+  create = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const product = req.body;
   

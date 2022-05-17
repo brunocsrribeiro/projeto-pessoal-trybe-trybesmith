@@ -9,7 +9,6 @@ const error = (
   _next: NextFunction,
 ): Response => {
   const errorJoi = Joi.isError(err);
-  console.log(err);
 
   if (errorJoi) {
     return res.status(StatusCodes.BAD_REQUEST).json({ message: err.message });

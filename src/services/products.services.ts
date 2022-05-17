@@ -9,12 +9,12 @@ export default class ProductsServices {
     this.product = new ProductsModel(Connection);
   }
 
-  public async getAll(): Promise<IProducts[]> {
+  async getAll(): Promise<IProducts[]> {
     const products = await this.product.getAll();
     return products;
   }
 
-  public async create(product: IProducts): Promise<IProducts> {
+  async create(product: IProducts): Promise<IProducts> {
     return this.product.create(product);
   }
 }
