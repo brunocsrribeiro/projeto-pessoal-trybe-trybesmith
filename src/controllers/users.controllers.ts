@@ -9,7 +9,7 @@ export default class UsersControllers {
     this.user = new UsersServices();
   }
 
-  create = async (req: Request, res: Response, next: NextFunction) => {
+  create = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const user = req.body;
   

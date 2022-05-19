@@ -1,5 +1,8 @@
-export default interface IOrders {
+export interface IOrders {
   id: number;
   userId: number;
-  productsId: number;
+}
+
+export interface IProductsId extends IOrders {
+  productsIds: Array<number>,
 }
